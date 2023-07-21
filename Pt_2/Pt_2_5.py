@@ -3,7 +3,8 @@ score = 0
 win = 0
 loss = 0
 while score < 3:
-    player = int(input("Введите 0, если хотите выбрать орла или 1, если хотите выбрать решку: "))
+    player = int(input("Введите 0, если хотите выбрать орла или 1,"
+                       " если хотите выбрать решку: "))
 
     if player != 0 and player != 1:
         print("Вы ввели не то число.")
@@ -11,7 +12,7 @@ while score < 3:
 
     program = random.choice([0, 1])
     if player == program:
-        win = win+1
+        win = win + 1
         score = 0
         print("Вы выиграли!")
 
@@ -20,9 +21,7 @@ while score < 3:
         score = score + 1
         print("Вы проиграли!")
 
-    print("Количество выиграшей составляет ", win, " раз(а), а проигрышей ,", loss, " раз(а)")
+    print("Количество выиграшей составляет ", win, " раз(а), а проигрышей ,"
+          , loss, " раз(а)")
     print()
-print ("Игра окончена!")
-
-
-
+print("Игра окончена!")
