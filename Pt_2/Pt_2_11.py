@@ -8,4 +8,3 @@ sum = 0
 for i in range(a, b + 1):
     sum = sum + i
 print("Сумма чисел от А до В (включительно): ", sum)
-
