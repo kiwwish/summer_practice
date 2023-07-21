@@ -1,4 +1,4 @@
-def all_ways(graph, start, end, way = []):
+def all_ways(graph, start, end, way=[]):
     way = way + [start]
     if start == end:
         return [way]
@@ -10,6 +10,8 @@ def all_ways(graph, start, end, way = []):
             new_ways = all_ways(graph, el, end, way)
             ways.extend(new_ways)
     return ways
+
+
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
