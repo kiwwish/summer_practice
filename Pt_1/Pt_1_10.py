@@ -1,3 +1,3 @@
 import math
 f = float(input("Введите число: "))
-print (round(f,2))
+print(round(f, 2))
