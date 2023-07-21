@@ -10,7 +10,7 @@ s = str(input("Введите строку: ")).upper()
 result = []
 s = list(s)
 for symbol in s:
-        for key in dict:
-                if key == symbol:
-                        result.append(dict[key])
+    for key in dict:
+        if key == symbol:
+            result.append(dict[key])
 print(''.join(result))
