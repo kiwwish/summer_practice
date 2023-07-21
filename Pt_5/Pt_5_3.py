@@ -1,18 +1,23 @@
-import  csv
+import csv
 
-def check_year (sting):
-    return 0
+def books(first, last):
+    books = []
+    with open("books.csv", newline='') as file:
+        reader = csv.DictReader(file, delimiter=";")
+        for el in reader:
+            for year in range(first, last + 1):
+                year = str(year)
+                if year == el["Год издания"]:
+                    books.append(el)
+    if not books:
+        print("В списке ет книг этого временного промежутка")
+    else:
+        for el in books:
+            print(el["Название книги"], " ", el["Автор"], " ", el["Год издания"])
 
-first = str(input())
-last = str(input())
-file = list(csv.reader(open("books.csv")))
-books =[]
-for el in file:
-    books.append(el)
-count = 0
-for el in books:
-    if first <= int(books[el][2]) and int(books[el][2]) <= last:
-        print(books[el])
-    count = count + 1
-if count == 0:
-    print("Книг в данном диапозоне не найдено")
+try:
+    first_yr = int(input("Введите нижнюю границу диапазона годов: "))
+    last_yr = int(input("Введите верхнюю границу диапазона годов: "))
+    books(first_yr, last_yr)
+except ValueError:
+    print("Введено не число!")

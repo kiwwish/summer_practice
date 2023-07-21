@@ -18,5 +18,3 @@ with open("books.csv", "r") as file:
             count = count + 1
     if count == 0:
         print("Ничего не найдено")
-
-
