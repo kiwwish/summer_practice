@@ -1,5 +1,6 @@
 import csv
 
+
 def books(first, last):
     books = []
     with open("books.csv", newline='') as file:
@@ -13,7 +14,9 @@ def books(first, last):
         print("В списке ет книг этого временного промежутка")
     else:
         for el in books:
-            print(el["Название книги"], " ", el["Автор"], " ", el["Год издания"])
+            print(el["Название книги"], " ", el["Автор"], " ",
+                  el["Год издания"])
+
 
 try:
     first_yr = int(input("Введите нижнюю границу диапазона годов: "))

@@ -1,4 +1,5 @@
 import csv
+
 books = [("Название книги", "Автор", "Год издания"),
           ["Роковые яйц", "Булгаков М. А.", "1924"],
           ["Дом, в котором", "Петросян М.", "2009"],
@@ -7,4 +8,4 @@ books = [("Название книги", "Автор", "Год издания"),
           ["Гарри Поттер и Орден Феникса", "Роулинг Дж. К.", "2003"]]
 with open("books.csv", "w", newline='') as file:
     writer = csv.writer(file, delimiter=";")
-    writer.writerows(books)
+    writer.writerows(books) 
