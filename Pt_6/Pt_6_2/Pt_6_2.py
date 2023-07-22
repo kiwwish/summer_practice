@@ -6,7 +6,7 @@ class SteamSpider(scrapy.Spider):
     name = 'steam_tags'
     allowed_domains = ["store.steampowered.com"]
     url = "https://store.steampowered.com/search/?category1=998&filter=topsellers&ndl=1&page=%s"
-    page = 1q12
+    page = 1
     start_urls = [url % page]
     count = 0
 
